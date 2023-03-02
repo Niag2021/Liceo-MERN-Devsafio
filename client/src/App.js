@@ -1,14 +1,15 @@
-import './App.css';
+import {Route, Routes} from 'react-router-dom'; 
+import AlumnosPage from "./pages/AlumnosPage"; 
+import AlumnosForm from "./pages/AlumnosForm";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<AlumnosPage />}/>
+      <Route path="/new" element={<AlumnosForm />}/>
+      <Route path="*" element={<NotFound />}/>
+    </Routes>
   );
 }
 
