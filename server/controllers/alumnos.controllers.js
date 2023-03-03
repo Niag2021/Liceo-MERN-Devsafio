@@ -27,10 +27,10 @@ export const getAlumno = async (req, res) => {
 
 export const createAlumno = async (req, res) => {
     try {
-        const { nombre1, edad, matriculado } = req.body;
-        const [result] = await pool.query("INSERT INTO alumnos(nombre1, edad, matriculado) VALUES (?,?,?)", [nombre1, edad, matriculado]);
+        const { nombre1, nombre2, apellido1, apellido2, edad, id_profesor_jefe, id_curso, id_sala, telefono, telefono_apoderado, parentesco_apoderado  } = req.body;
+        const [result] = await pool.query("INSERT INTO alumnos(nombre1, nombre2, apellido1, apellido2, edad, id_profesor_jefe, id_curso, id_sala, telefono, telefono_apoderado, parentesco_apoderado) VALUES (?,?,?,?,?,?,?,?,?,?,?)" ,[nombre1, nombre2, apellido1, apellido2, edad, id_profesor_jefe, id_curso, id_sala, telefono, telefono_apoderado, parentesco_apoderado]);
         //console.log(result);
-        res.json({ id_alumnos: result.insertId, nombre1, edad, matriculado });
+        res.json({ id_alumnos: result.insertId, nombre1, nombre2, apellido1, apellido2, edad, id_profesor_jefe, id_curso, id_sala, telefono, telefono_apoderado, parentesco_apoderado });
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
