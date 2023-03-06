@@ -1,25 +1,32 @@
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <div>
-        <h1>React MySQL</h1>
-        <ul>
+      <h1>React MySQL</h1>
+      <ul class="nav">
+        <li class="nav-item">
           <Link to="/">Home</Link>
-            <br/>
-          <Link to="/Alumnos">Alumnos</Link>
-            <br/>
+        </li>
+        <li class="nav-item">
+          <Link to="/Alumnos">Alumno</Link>
+        </li>
+        <li class="nav-item">
           <Link to="/createAlumno">Nuevo Alumno</Link>
-            <br/>
+        </li>
+        <li class="nav-item">
           <Link to="/editAlumno/:id">Editar Alumnos</Link>
-            <br/>
+        </li>
+        <li class="nav-item">
           <Link to="/Cursos">Cursos</Link>
-            <br/>
+        </li>
+        <li class="nav-item">
           <Link to="/createCurso">Nuevo Curso</Link>
-            <br/>
+        </li>
+        <li class="nav-item">
           <Link to="/editCurso/:id">Editar Cursos</Link>
-            <br/>
-        </ul>
+        </li>
+      </ul>
     </div>
   )
 }
