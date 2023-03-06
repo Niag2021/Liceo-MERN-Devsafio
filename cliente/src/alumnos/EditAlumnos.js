@@ -1,7 +1,7 @@
 const EditAlumnos = () => {
     return (
-        <div>
-            <h3>Este componente viene de EditAlumnos.</h3>
+        <div align="center">
+            <h3>Editar Alumno.</h3>
         </div> 
     )    
 }

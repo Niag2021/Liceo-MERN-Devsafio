@@ -1,7 +1,7 @@
 const Cursos = () => {
     return (
-        <div>
-            <h3>Este componente viene de Cursos.</h3>
+        <div align="center">
+            <h3>Cursos.</h3>
         </div> 
     )    
 }

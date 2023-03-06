@@ -1,7 +1,7 @@
 const CreateAlumnos = () => {
     return (
-        <div>
-            <h3>Este componente viene de CreateAlumnos.</h3>
+        <div align="center">
+            <h3>Crear Alumno.</h3>
         </div> 
     )    
 }
