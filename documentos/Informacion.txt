@@ -3,10 +3,22 @@
     1) cd server 
     2) npm run dev 
 
+* Cliente : 
+
+    1) cd client 
+    2) npm start 
+
+- npm i react-router-dom : Para crear multiples paginas. 
+
 -----------------------------------------------------------------------------------------------------
 
-Video: 00:53:52 // 01:00:16 
+Video: 00:53:52 // 01:21:26 
 
 - npm i react-router-dom@6.0.2: Para crear multiples paginas. 
 
 
+
+- npm i formik: Para crear formularios. 
+- npm i axios: Biblioteca para enviar peticiones HTTP de forma sencilla. 
+- npm i cors: Intercambio de Recursos de Origen Cruzado, carateristica de seguridad del navegador 
+que restringe las solicitudes HTTP de origen cruzado.

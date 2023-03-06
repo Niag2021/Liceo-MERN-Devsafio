@@ -1,15 +1,21 @@
 import {Route, Routes} from 'react-router-dom'; 
+
 import AlumnosPage from "./pages/AlumnosPage"; 
 import AlumnosForm from "./pages/AlumnosForm";
 import NotFound from "./pages/NotFound";
 
+import Navbar from './components/Navbar';
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<AlumnosPage />}/>
-      <Route path="/new" element={<AlumnosForm />}/>
-      <Route path="*" element={<NotFound />}/>
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<AlumnosPage />}/>
+        <Route path="/new" element={<AlumnosForm />}/>
+        <Route path="*" element={<NotFound />}/>
+      </Routes>
+    </>
   );
 }
 
