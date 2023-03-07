@@ -1,8 +1,60 @@
+import axios from 'axios'
+import {useState, useEffect} from 'react'
+
+const URI = 'http://localhost:4000/cursos/'
+
 const Cursos = () => {
+    const [cursos, setCursos] = useState([])
+
+    useEffect( ()=>{
+        getCursos()
+    },[])
+
+    //Procedimiento para mostrar todos los cursos 
+    const getCursos = async () => {
+        const res = await axios.get(URI)      
+        setCursos(res.data)
+    }
+
+    //Procedimiento para eliminar un curso
+    //parametro (id_cursos)
+    const deleteCursos = async(id_cursos)=>{
+        await axios.delete(`${URI}${id_cursos}`)
+        getCursos()
+    }
+
     return (
-        <div align="center">
-            <h3>Cursos.</h3>
-        </div> 
+        <div className='container'>
+            <div className='row'>
+                <div className='col'>
+                    <table className='table'>
+                        <thead className='table-primary'>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Id Alumnos</th>
+                                <th>Id Sala</th>
+                                <th>Profesor Jefe</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {cursos.map((curso) => (
+                                <tr key={curso.id_cursos}>
+                                    <td>{curso.nombre}</td>
+                                    <td>{curso.id_alumno}</td>
+                                    <td>{curso.id_sala}</td>
+                                    <td>{curso.id_profesor_jefe}</td>
+                                    <td>
+                                        <button onClick={ () => deleteCursos(curso.id_cursos)} class='btn btn-danger'>Eliminar</button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     )    
 }
 

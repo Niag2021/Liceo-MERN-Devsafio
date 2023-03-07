@@ -1,7 +1,6 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 
-
 const URI = 'http://localhost:4000/alumnos/'
 
 const Alumnos = () => {
@@ -11,11 +10,19 @@ const Alumnos = () => {
         getAlumnos()
     },[])
 
+    //Procedimiento para mostrar todos los alumnos 
     const getAlumnos = async () => {
         const res = await axios.get(URI)      
         setAlumnos(res.data)
     }
-//<div></div>
+
+    //Procedimiento para eliminar un alumno
+    //parametro (id_alumnos)
+    const deleteAlumnos = async(id_alumnos)=>{
+        await axios.delete(`${URI}${id_alumnos}`)
+        getAlumnos()
+    }
+
     return (
         <div className='container'>
             <div className='row'>
@@ -33,6 +40,7 @@ const Alumnos = () => {
                                 <th>Sala</th>
                                 <th>Telefono</th>
                                 <th>Apoderado parentesco</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
 
@@ -49,6 +57,9 @@ const Alumnos = () => {
                                     <td>{alumno.id_sala}</td>
                                     <td>{alumno.telefono_apoderado}</td>
                                     <td>{alumno.parentesco_apoderado}</td>
+                                    <td>
+                                        <button onClick={ () => deleteAlumnos(alumno.id_alumnos)} class='btn btn-danger'>Eliminar</button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
