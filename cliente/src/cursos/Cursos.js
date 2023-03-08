@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
 const URI = 'http://localhost:4000/cursos/'
 
@@ -27,6 +28,7 @@ const Cursos = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col'>
+                <Link to="/createCurso" className='btn btn-primary mt-2 mb-2'>Crear</Link>
                     <table className='table'>
                         <thead className='table-primary'>
                             <tr>
@@ -46,6 +48,7 @@ const Cursos = () => {
                                     <td>{curso.id_sala}</td>
                                     <td>{curso.id_profesor_jefe}</td>
                                     <td>
+                                        <Link to={`/edit/${curso.id_cursos}`} className='btn btn-info'>Modificar</Link>
                                         <button onClick={ () => deleteCursos(curso.id_cursos)} class='btn btn-danger'>Eliminar</button>
                                     </td>
                                 </tr>

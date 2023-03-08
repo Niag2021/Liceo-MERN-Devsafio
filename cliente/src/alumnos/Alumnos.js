@@ -1,8 +1,10 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
 const URI = 'http://localhost:4000/alumnos/'
-
+//<></>
+//``
 const Alumnos = () => {
     const [alumnos, setAlumnos] = useState([])
 
@@ -27,6 +29,7 @@ const Alumnos = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col'>
+                <Link to="/createAlumno" className='btn btn-primary mt-2 mb-2'>Crear</Link>
                     <table className='table'>
                         <thead className='table-primary'>
                             <tr>
@@ -58,6 +61,7 @@ const Alumnos = () => {
                                     <td>{alumno.telefono_apoderado}</td>
                                     <td>{alumno.parentesco_apoderado}</td>
                                     <td>
+                                        <Link to={`/EditAlumnos/${alumno.id_alumnos}`} className='btn btn-info'>Modificar</Link>
                                         <button onClick={ () => deleteAlumnos(alumno.id_alumnos)} class='btn btn-danger'>Eliminar</button>
                                     </td>
                                 </tr>
