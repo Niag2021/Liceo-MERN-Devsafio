@@ -1,5 +1,3 @@
-// => 
-
 import {pool} from '../db.js';
 
 export const getCursos = async (req, res) => {

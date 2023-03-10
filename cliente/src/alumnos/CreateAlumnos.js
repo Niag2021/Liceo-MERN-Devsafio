@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const URI = 'http://localhost:4000/alumnos/'
+  const URI = 'http://localhost:4000/alumnos/'
 
 const CreateAlumnos = () => {
     const [nombre1, setNombre1] = useState('')

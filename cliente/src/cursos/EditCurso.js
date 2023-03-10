@@ -1,14 +1,14 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios"
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 
 const URI = 'http://localhost:4000/cursos/'
 
 const EditCursos = () => {
     const [nombre, setNombre] = useState('')
-    const [id_alumno, setIdAlumno] = useState('')
-    const [id_sala, setIdSala] = useState('')
-    const [id_profesor_jefe, setIdProfesorJefe] = useState('')
+    const [id_alumno, setIDAlumno] = useState('')
+    const [id_sala, setIDSala] = useState('')
+    const [id_profesor_jefe, setIDProfesorJefe] = useState('')
     const navigate = useNavigate('')
     const { id_cursos } = useParams()
 
@@ -16,22 +16,27 @@ const EditCursos = () => {
     const update = async (e) => {
         e.preventDefault()
         await axios.put(URI + id_cursos, {
-            nombre: nombre, id_alumno: id_alumno, id_sala: id_sala, id_profesor_jefe: id_profesor_jefe
+            nombre: nombre, 
+            id_alumno: id_alumno, 
+            id_sala: id_sala,
+            id_profesor_jefe: id_profesor_jefe
         })
         navigate('/Cursos')
     }
 
+    // => {} <></> 
     useEffect(() => {
-        getCursosById()
+        getCursoById()
     }, [])
 
-    const getCursosById = async (e) => {
-        const res = await axios.get(URI + id_cursos)
+    const getCursoById = async (e) => {
+        const res = await axios.get(URI + id_cursos) 
         setNombre(res.data.nombre)
-        setIdAlumno(res.data.id_alumno)
-        setIdSala(res.data.id_sala)
-        setIdProfesorJefe(res.data.id_profesor_jefe)
+        setIDAlumno(res.data.id_alumno)
+        setIDSala(res.data.id_sala)
+        setIDProfesorJefe(res.data.id_profesor_jefe)
     }
+    
 
     return (
         <div>
@@ -43,15 +48,15 @@ const EditCursos = () => {
                 </div>
                 <div>
                     <label className="form-label">Id Alumnos:</label>
-                    <input value={id_alumno} onChange={(e) => setIdAlumno(e.target.value)} type="number" className="form-control" />
+                    <input value={id_alumno} onChange={(e) => setIDAlumno(e.target.value)} type="number" className="form-control" />
                 </div>
                 <div>
                     <label className="form-label">Id Sala:</label>
-                    <input value={id_sala} onChange={(e) => setIdSala(e.target.value)} type="number" className="form-control" />
+                    <input value={id_sala} onChange={(e) => setIDSala(e.target.value)} type="number" className="form-control" />
                 </div>
                 <div>
                     <label className="form-label">Id Profesor Jefe:</label>
-                    <input value={id_profesor_jefe} onChange={(e) => setIdProfesorJefe(e.target.value)} type="number" className="form-control" />
+                    <input value={id_profesor_jefe} onChange={(e) => setIDProfesorJefe(e.target.value)} type="number" className="form-control" />
                 </div>
                 <button type="submit" className="btn btn-primary">Modificar</button>
             </form>

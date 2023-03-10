@@ -36,3 +36,35 @@ CREATE TABLE cursos (
     updatedAt TimeStamp NOT NULL default current_timestamp
 );
 */
+
+-- Crear tabla asignaturas. 
+/*
+CREATE TABLE asignaturas ( 
+	id_asignaturas INTEGER PRIMARY KEY auto_increment,
+    nombre1_profesor VARCHAR(25) NOT NULL,
+    nombre2_profesor VARCHAR(25) NOT NULL,
+    apellido1_profesor VARCHAR(25) NOT NULL,
+    apellido2_profesor VARCHAR(25) NOT NULL,
+    telefono INTEGER(10) NOT NULL,
+    direccion VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    createdAt TimeStamp NOT NULL default current_timestamp,
+    updatedAt TimeStamp NOT NULL default current_timestamp
+);
+*/
+
+-- Crear tabla apoderados. 
+/*
+CREATE TABLE apoderados ( 
+	id_apoderados INTEGER PRIMARY KEY auto_increment,
+    nombre1_apoderado VARCHAR(25) NOT NULL,
+    nombre2_apoderado VARCHAR(25) NOT NULL,
+    apellido1_apoderado VARCHAR(25) NOT NULL,
+    apellido2_apoderado VARCHAR(25) NOT NULL,
+    telefono INTEGER(10) NOT NULL,
+    direccion VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    createdAt TimeStamp NOT NULL default current_timestamp,
+    updatedAt TimeStamp NOT NULL default current_timestamp
+);
+*/

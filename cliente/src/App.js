@@ -7,7 +7,14 @@ import CreateAlumnos from './alumnos/CreateAlumnos.js';
 import EditarAlumnos from './alumnos/EditAlumnos.js';
 import Cursos from './cursos/Cursos.js';
 import CreateCursos from './cursos/CreateCursos.js';
-import EditarCursos from './cursos/EditCursos.js';
+import EditarCurso from './cursos/EditCurso.js';
+import Asignaturas from './asignaturas/Asignaturas';
+import CreateAsignatura from './asignaturas/CreateAsignatura';
+import EditarAsignatura from './asignaturas/EditAsignatura';
+import Apoderados from './apoderados/Apoderados.js';
+import CreateApoderado from './apoderados/CreateApoderado.js';
+import EditarApoderado from './apoderados/EditApoderado.js';
+//Componente que almacena la barra de navegacion 
 import Navbar from './componentes/Navbar.js';
 
 function App() {
@@ -22,7 +29,13 @@ function App() {
           <Route path='/editAlumno/:id' element={ <EditarAlumnos />}/>
           <Route path='/Cursos' element={ <Cursos />}/>
           <Route path='/createCurso' element={ <CreateCursos />}/>
-          <Route path='/edit/:id' element={ <EditarCursos />}/>
+          <Route path='/edit/:id' element={ <EditarCurso />}/>
+          <Route path='/Asignaturas' element={ <Asignaturas />}/>
+          <Route path='/createAsignatura' element={ <CreateAsignatura />}/>
+          <Route path='/edit/:id' element={ <EditarAsignatura />}/>
+          <Route path='/Apoderados' element={ <Apoderados />}/>
+          <Route path='/createApoderado' element={ <CreateApoderado />}/>
+          <Route path='/edit/:id' element={ <EditarApoderado />}/>          
         </Routes>
       </BrowserRouter> 
     </div>

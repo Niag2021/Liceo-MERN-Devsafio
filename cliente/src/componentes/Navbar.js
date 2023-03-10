@@ -1,33 +1,50 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import '../estilos/estiloNavbar.css';
 
 function Navbar() {
   return (
-    <div>
-      <h1>React MySQL</h1>
-      <ul class="nav">
-        <li class="nav-item">
-          <Link to="/">Home</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/Alumnos">Alumno</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/createAlumno">Nuevo Alumno</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/editAlumno/:id">Editar Alumnos</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/Cursos">Cursos</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/createCurso">Nuevo Curso</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/editCurso/:id">Editar Cursos</Link>
-        </li>
-      </ul>
-    </div>
+    <p class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href='/'>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Alumnos">Alumnos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createAlumno">Nuevo Alumno</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Cursos">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createCurso">Nuevo Curso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Asignaturas">Asignatura</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createAsignatura">Nuevo Asignatura</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Apoderados">Apoderados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createApoderado">Nuevo Apoderado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Apoderados">Apoderados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createApoderado">Nuevo Apoderado</a>
+          </li>
+        </ul>
+      </div>
+    </p>
   )
 }
 
