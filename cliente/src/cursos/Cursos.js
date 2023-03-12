@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 //import '../estilos/estiloCursos.css';
 //import {FontAwesomeIcon} from 'font-awesome'
 
-
 const URI = 'http://localhost:4000/cursos/'
 
 const Cursos = () => {

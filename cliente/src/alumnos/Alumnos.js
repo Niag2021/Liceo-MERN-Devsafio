@@ -1,6 +1,7 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import '../estilos/estiloAlumnos.css';
 
 const URI = 'http://localhost:4000/alumnos/'
 //<></>

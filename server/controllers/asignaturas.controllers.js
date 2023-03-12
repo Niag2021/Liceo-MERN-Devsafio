@@ -1,23 +1,12 @@
 import {pool} from '../db.js';
 
-export const getAllAsignaturas = async (req, res) => {
+export const getAsignaturas = async (req, res) => {
     try{
         const [result] = await pool.query("SELECT * FROM asignaturas ORDER BY id_asignaturas ASC");
-        res.json(result);
-    }catch(error){
-        return res.status(500).json({message: error.message}); 
+    } catch(error){
+        return res.status(500).json({message: error.message});
     }
 }
-
-/*
-export const getAlumnos = async (req, res) => {
-    try {
-        const [result] = await pool.query("SELECT * FROM alumnos ORDER BY id_alumnos ASC");
-        res.json(result);
-    } catch (error) {
-        return res.status(500).json({ message: error.message });
-    }
-}*/
 
 export const getAsignatura = async (req, res) => {
     try{

@@ -1,15 +1,14 @@
-*{
-    background-color: #76d7c4;
-    border-radius: 20px;
-    margin-right: 10px;
+section{
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 10px 100px 0px 100px;
+    border-radius: 50px;
+    text-decoration: underline;
 }
 
 li{
-    background-color: #76d7c4;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-div{
-    
-}

@@ -1,0 +1,22 @@
+form{
+    
+}
+
+form div{
+    margin: 0px 250px 0px 250px;
+    padding: 0px 0px 0px 0px;
+}
+
+#form-control{
+    border-radius: 100px;
+}
+
+h3{
+    margin: 20px 0px 20px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+button{
+    margin: 20px 0px 20px 0px;
+    padding: 10px 10px 10px 10px;
+}
