@@ -17,18 +17,19 @@ const CreateAlumnos = () => {
     const [telefono, setTelefono] = useState('')
     const [telefono_apoderado, setTelefonoApoderado] = useState('')
     const [parentesto_apoderado, setParentescoApoderado] = useState('')
+    const [id_alumnos, setIdAlumnos] = useState('')
     const navigate = useNavigate('')
     
     //procedimiento guardar
     const store = async (e) => {
         e.preventDefault()
-        await axios.post(URI, {nombre1: nombre1, nombre2: nombre2, apellido1: apellido1, apellido2: apellido2, edad: edad, id_profesor_jefe: id_profesor_jefe, id_curso: id_curso, id_sala: id_sala, telefono: telefono, telefono_apoderado: telefono_apoderado, parentesto_apoderado: parentesto_apoderado})
+        await axios.post(URI, {nombre1: nombre1, nombre2: nombre2, apellido1: apellido1, apellido2: apellido2, edad: edad, id_profesor_jefe: id_profesor_jefe, id_curso: id_curso, id_sala: id_sala, telefono: telefono, telefono_apoderado: telefono_apoderado, parentesto_apoderado: parentesto_apoderado, id_alumnos: id_alumnos})
         navigate('/Alumnos')
     }
 
     return (
         <div>
-            <h3>Crear Alumno</h3>
+            <h3>Crear Alumno.</h3>
             <form onSubmit={store}>
                 <div>
                     <label className="form-label">Nombre 1:</label>

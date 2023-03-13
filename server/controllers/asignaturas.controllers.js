@@ -3,6 +3,7 @@ import {pool} from '../db.js';
 export const getAsignaturas = async (req, res) => {
     try{
         const [result] = await pool.query("SELECT * FROM asignaturas ORDER BY id_asignaturas ASC");
+        res.json(result);
     } catch(error){
         return res.status(500).json({message: error.message});
     }

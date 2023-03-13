@@ -20,7 +20,7 @@ const CreateCursos = () => {
 
     return (
         <div>
-            <h3>Crear Curso</h3>
+            <h3>Crear Curso.</h3>
             <form onSubmit={store}>
                 <div>
                     <label className="form-label">Nombre:</label>

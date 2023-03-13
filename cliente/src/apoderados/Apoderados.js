@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 import '../estilos/estiloApoderados.css';
 
 //Se define una constante que almacenara la ruta donde se muestran todos los apoderados
@@ -46,10 +47,10 @@ function Apoderados() {
     Se utiliza el metodo map() para iterar sobre la matriz de apoderados y generar una fila de 
     tabla para cada campo de "apoderado".    
     */
-
     <table class="table table-bordered">
       <thead>
-        <tr>
+      <Link to="/createApoderado" className='btn btn-primary mt-2 mb-2'>Crear</Link>
+        <tr>        
           <th>Nombre 1</th>
           <th>Nombre 2</th>
           <th>Apellido 1</th>
@@ -70,7 +71,7 @@ function Apoderados() {
             <td>{apoderado.telefono}</td>
             <td>{apoderado.direccion}</td>
             <td>{apoderado.email}</td>
-            <td>
+            <td>            
               <button onClick={() => deleteApoderados(apoderado.id_apoderados)} class='btn btn-danger'>Eliminar</button>
             </td>
           </tr>
