@@ -25,17 +25,17 @@ function Navbar() {
             <a class="nav-link" href="/createCurso">Nuevo Curso</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Asignaturas">Asignaturas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/createAsignatura">Nuevo Asignatura</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/Apoderados">Apoderados</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/createApoderado">Nuevo Apoderado</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Asignaturas">Asignaturas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createAsignatura">Nuevo Asignatura</a>
+          </li>          
         </ul>
       </section>
     </div>
