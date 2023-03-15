@@ -8,7 +8,6 @@ const URI = 'http://localhost:4000/apoderados/'
 
 function Apoderados() {
   //useState es un Hook que permite añadir el estado de React a un componente de función. 
-
   const [apoderados, setApoderados] = useState([])
 
   //useEffect, al usar este hook, le estamos indicando a React que el componente tiene que ejecutar getApoderados

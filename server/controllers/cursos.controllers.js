@@ -11,7 +11,7 @@ export const getCursos = async (req, res) => {
 
 export const getCurso = async (req, res) => {
     try{
-        const [result] = await pool.query("SELECT * FROM cursos WHERE id_cursos = ?", [req.params.id]);
+        const [result] = await pool.query("SELECT * FROM cursos WHERE id_cursos = ?", [req.params.id_cursos]);
 
         if(result.length === 0)
             return res.status(404).json({ message: "Curso no encontrado."});
@@ -32,6 +32,16 @@ export const createCurso = async (req, res) => {
     }
 }
 
+export const updateCurso = async (id_cursos) => {
+    try{ 
+        const response = await getCurso(id_cursos)
+        return response.data
+    }catch (error){
+        console.log(error); 
+    }
+}
+
+/*
 export const updateCurso = async (req, res) => {
     try {
         const result = await pool.query("UPDATE cursos SET ? WHERE id_cursos = ?", [req.body, req.params.id,]);
@@ -40,6 +50,7 @@ export const updateCurso = async (req, res) => {
         return res.status(500).json({ message: error.message });
     }
 }
+*/
 
 export const deleteCurso = async (req, res) => {
     try {

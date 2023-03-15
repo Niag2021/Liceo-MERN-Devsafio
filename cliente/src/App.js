@@ -29,7 +29,7 @@ function App() {
           <Route path='/editAlumno/:id' element={ <EditarAlumnos />}/>
           <Route path='/Cursos' element={ <Cursos />}/>
           <Route path='/createCurso' element={ <CreateCursos />}/>
-          <Route path='/edit/:id' element={ <EditarCurso />}/>
+          <Route path='/editCurso/:id' element={ <EditarCurso />}/>
           <Route path='/Asignaturas' element={ <Asignaturas />}/>
           <Route path='/createAsignatura' element={ <CreateAsignatura />}/>
           <Route path='/edit/:id' element={ <EditarAsignatura />}/>

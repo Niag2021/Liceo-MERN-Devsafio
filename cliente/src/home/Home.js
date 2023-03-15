@@ -8,7 +8,7 @@ import asignaturas from '../img/asignaturas.jpg';
 const Home = () => {
     return (
         <div>
-            <h1>Liceo Santa Teresa de los Andes.</h1>
+            <h1>LICEO SANTA TERESA DE LOS ANDES.</h1>
 
             <p className="informacion">
                 <h2 className="tarjetas">

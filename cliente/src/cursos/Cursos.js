@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 //import '../estilos/estiloCursos.css';
 //import {FontAwesomeIcon} from 'font-awesome'
 
@@ -8,6 +8,7 @@ const URI = 'http://localhost:4000/cursos/'
 
 const Cursos = () => {
     const [cursos, setCursos] = useState([])
+    const navigate = useNavigate()
 
     useEffect( ()=>{
         getCursos()
@@ -50,7 +51,8 @@ const Cursos = () => {
                                     <td>{curso.id_sala}</td>
                                     <td>{curso.id_profesor_jefe}</td>
                                     <td>
-                                        <Link to={`/edit/${curso.id_cursos}`} className='btn btn-info'>Modificar</Link>
+                                        <Link to={`/editCurso/${curso.id_cursos}`} className='btn btn-info'>Modificar</Link>
+                                        <button onClick={() => navigate(`/editCurso/${curso.id_cursos}`)}>Actualizar de prueba</button>
                                             <br/>
                                         <button onClick={ () => deleteCursos(curso.id_cursos)} class='btn btn-danger'>Eliminar</button>
                                     </td>
