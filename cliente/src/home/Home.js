@@ -1,14 +1,14 @@
 //import '../estilos/estiloHome.css';
 import '../estilos/estiloHome2.css';
-import alumnos from '../img/alumnos.jpg';
-import cursos from '../img/cursos.jpg';
-import apoderados from '../img/apoderados.jpg';
-import asignaturas from '../img/asignaturas.jpg';
+import inicioClases from '../img/inicioClases.png';
+
 
 const Home = () => {
     return (
         <div>
             <h1>LICEO SANTA TERESA DE LOS ANDES.</h1>
+
+            <img src={inicioClases} alt="Alumno" />
 
             <p className="informacion">
                 <h2 className="tarjetas">
@@ -23,20 +23,6 @@ const Home = () => {
                     Valores.
                     <h6>“Construir una comunidad educativa inspirada en la fe católica y orientada al desarrollo de una educación de calidad con equidad, con énfasis en la sana convivencia”</h6>
                 </h2>
-                <br /><br />
-
-                <h3 className="modulo">
-                    <img src={alumnos} alt="Alumno"/>
-                </h3>
-                <h3 className="modulo">
-                    <img src={cursos}/>
-                </h3>
-                <h3 className="modulo">
-                    <img src={apoderados}/>
-                </h3>
-                <h3 className="modulo">
-                    <img src={asignaturas}/>
-                </h3>
             </p>
         </div>
 

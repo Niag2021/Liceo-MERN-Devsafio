@@ -25,12 +25,17 @@ const EditCursos = () => {
     }
 
     // => {} <></> 
+    
     useEffect(() => {
         getCursoById()
     }, [])
 
+    //setTitle(res.data.title)
+    
+
     const getCursoById = async (e) => {
         const res = await axios.get(URI + id_cursos) 
+        
         setNombre(res.data.nombre)
         setIDAlumno(res.data.id_alumno)
         setIDSala(res.data.id_sala)
