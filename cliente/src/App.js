@@ -32,10 +32,10 @@ function App() {
           <Route path='/editCurso/:id' element={ <EditarCurso />}/>
           <Route path='/Asignaturas' element={ <Asignaturas />}/>
           <Route path='/createAsignatura' element={ <CreateAsignatura />}/>
-          <Route path='/edit/:id' element={ <EditarAsignatura />}/>
+          <Route path='/editAsignatura/:id' element={ <EditarAsignatura />}/>
           <Route path='/Apoderados' element={ <Apoderados />}/>
           <Route path='/createApoderado' element={ <CreateApoderado />}/>
-          <Route path='/edit/:id' element={ <EditarApoderado />}/>          
+          <Route path='/editApoderado/:id' element={ <EditarApoderado />}/>          
         </Routes>
       </BrowserRouter> 
     </div>

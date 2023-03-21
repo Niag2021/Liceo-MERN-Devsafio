@@ -34,8 +34,7 @@ const EditCursos = () => {
     
 
     const getCursoById = async (e) => {
-        const res = await axios.get(URI + id_cursos) 
-        
+        const res = await axios.get(URI + id_cursos)         
         setNombre(res.data.nombre)
         setIDAlumno(res.data.id_alumno)
         setIDSala(res.data.id_sala)

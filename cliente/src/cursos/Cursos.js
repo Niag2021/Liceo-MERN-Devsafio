@@ -2,7 +2,6 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 //import '../estilos/estiloCursos.css';
-//import {FontAwesomeIcon} from 'font-awesome'
 
 const URI = 'http://localhost:4000/cursos/'
 
