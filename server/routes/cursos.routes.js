@@ -3,8 +3,8 @@ import { getCursos, getCurso, createCurso, updateCurso, deleteCurso } from '../c
 
 const router = Router()
     router.get('/cursos', getCursos);
-    router.get('/cursos/:id', getCurso);
-    router.post('/cursos', createCurso);
-    router.put('/cursos/:id', updateCurso); 
-    router.delete('/cursos/:id', deleteCurso); 
+    router.get('/curso/:id', getCurso);
+    router.post('/curso', createCurso);
+    router.put('/curso/:id', updateCurso); 
+    router.delete('/curso/:id', deleteCurso); 
 export default router

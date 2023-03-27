@@ -3,8 +3,8 @@ import { getApoderados, getApoderado, createApoderado, updateApoderado, deleteAp
 
 const router = Router()
     router.get('/apoderados', getApoderados);
-    router.get('/apoderados/:id', getApoderado);
-    router.post('/apoderados', createApoderado);
-    router.put('/apoderados/:id', updateApoderado);
-    router.delete('/apoderados/:id', deleteApoderado);
+    router.get('/apoderado/:id', getApoderado);
+    router.post('/apoderado', createApoderado);
+    router.put('/apoderado/:id', updateApoderado);
+    router.delete('/apoderado/:id', deleteApoderado);
 export default router

@@ -3,8 +3,8 @@ import { getAlumnos, getAlumno, createAlumno, updateAlumno, deleteAlumno } from 
 
 const router = Router()
     router.get('/alumnos', getAlumnos);
-    router.get('/alumnos/:id', getAlumno);
-    router.post('/alumnos', createAlumno);
-    router.put('/alumnos/:id', updateAlumno);
-    router.delete('/alumnos/:id', deleteAlumno);
+    router.get('/alumno/:id', getAlumno);
+    router.post('/alumno', createAlumno);
+    router.put('/alumno/:id', updateAlumno);
+    router.delete('/alumno/:id', deleteAlumno);
 export default router

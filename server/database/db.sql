@@ -4,67 +4,114 @@ create database liceo;
 -- Usar BD 
 use liceo;
 
--- Crear tabla alumnos. 
+-- Crear tabla alumno. 
 /*
-CREATE TABLE alumnos ( 
-	id_alumnos INTEGER PRIMARY KEY auto_increment,
-    nombre1 VARCHAR(200) NOT NULL,
-    nombre2 VARCHAR(200) NOT NULL,
-    apellido1 VARCHAR(200) NOT NULL,
-    apellido2 VARCHAR(200) NOT NULL,
-    edad INT NOT NULL,
-    id_profesor_jefe INT(2) NOT NULL,
-    id_curso INT(2) NOT NULL,
-    id_sala INT(2) NOT NULL,
-    telefono INT(10),
-    telefono_apoderado INT(10) NOT NULL,
-    parentesco_apoderado VARCHAR(25) NOT NULL,
-    createdAt TimeStamp NOT NULL default current_timestamp,
-    updatedAt TimeStamp NOT NULL default current_timestamp
+CREATE TABLE usuario (
+  id_usuario INTEGER PRIMARY KEY auto_increment,
+  rut INTEGER NOT NULL,
+  clave VARCHAR(10) NOT NULL,
+  perfil VARCHAR(15) NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
+);
+-------------------------------------------------------------
+-- Crear tabla alumno. 
+/*
+CREATE TABLE alumno (
+  id_alumno INTEGER PRIMARY KEY auto_increment,
+  nombre1_alumno VARCHAR(15) NOT NULL,
+  nombre2_alumno VARCHAR(15) NOT NULL,
+  apellido1_alumno VARCHAR(15) NOT NULL,
+  apellido2_alumno VARCHAR(15) NOT NULL,
+  edad INTEGER NOT NULL,
+  telefono INTEGER NOT NULL, 
+  email VARCHAR(50) NOT NULL,
+  nombre1_apoderado VARCHAR(15) NOT NULL,
+  nombre2_apoderado VARCHAR(15) NOT NULL,
+  apellido1_apoderado VARCHAR(15) NOT NULL,
+  apellido2_apoderado VARCHAR(15) NOT NULL,
+  nombre_curso VARCHAR(15) NOT NULL, 
+  nombre1_profesor_jefe VARCHAR(15) NOT NULL,
+  nombre2_profesor_jefe VARCHAR(15) NOT NULL,
+  apellido1_profesor_jefe VARCHAR(15) NOT NULL,
+  apellido2_profesor_jefe VARCHAR(15) NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
 );
 */
-
--- Crear tabla cursos. 
+-------------------------------------------------------------
+-- Crear tabla apoderado. 
 /*
-CREATE TABLE cursos ( 
-	id_cursos INTEGER PRIMARY KEY auto_increment,
-    nombre VARCHAR(10) NOT NULL,
-    id_alumno INTEGER(3) NOT NULL,
-    id_sala INT(3) NOT NULL,
-    id_profesor_jefe INT(3) NOT NULL,
-    createdAt TimeStamp NOT NULL default current_timestamp,
-    updatedAt TimeStamp NOT NULL default current_timestamp
+CREATE TABLE apoderado (
+  id_apoderado INTEGER PRIMARY KEY auto_increment,
+  nombre1_apoderado VARCHAR(15) NOT NULL,
+  nombre2_apoderado VARCHAR(15) NOT NULL,
+  apellido1_apoderado VARCHAR(15) NOT NULL,
+  apellido2_apoderado VARCHAR(15) NOT NULL,
+  telefono INTEGER NOT NULL, 
+  email VARCHAR(50) NOT NULL,
+  nombre1_alumno VARCHAR(15) NOT NULL,
+  nombre2_alumno VARCHAR(15) NOT NULL,
+  apellido1_alumno VARCHAR(15) NOT NULL,
+  apellido2_alumno VARCHAR(15) NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
 );
 */
-
--- Crear tabla asignaturas. 
+-------------------------------------------------------------
+-- Crear tabla profesor. 
 /*
-CREATE TABLE asignaturas ( 
-	id_asignaturas INTEGER PRIMARY KEY auto_increment,
-    nombre1_profesor VARCHAR(25) NOT NULL,
-    nombre2_profesor VARCHAR(25) NOT NULL,
-    apellido1_profesor VARCHAR(25) NOT NULL,
-    apellido2_profesor VARCHAR(25) NOT NULL,
-    telefono INTEGER(10) NOT NULL,
-    direccion VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    createdAt TimeStamp NOT NULL default current_timestamp,
-    updatedAt TimeStamp NOT NULL default current_timestamp
+CREATE TABLE profesor (
+  id_profesor INTEGER PRIMARY KEY auto_increment,
+  nombre1_profesor VARCHAR(15) NOT NULL,
+  nombre2_profesor VARCHAR(15) NOT NULL,
+  apellido1_profesor VARCHAR(15) NOT NULL,
+  apellido2_profesor VARCHAR(15) NOT NULL,
+  nombre_asignatura VARCHAR(20) NOT NULL, 
+  edad INTEGER NOT NULL,
+  telefono INTEGER NOT NULL, 
+  email VARCHAR(50) NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
 );
 */
-
--- Crear tabla apoderados. 
+-------------------------------------------------------------
+-- Crear tabla profesor jefe. 
 /*
-CREATE TABLE apoderados ( 
-	id_apoderados INTEGER PRIMARY KEY auto_increment,
-    nombre1_apoderado VARCHAR(25) NOT NULL,
-    nombre2_apoderado VARCHAR(25) NOT NULL,
-    apellido1_apoderado VARCHAR(25) NOT NULL,
-    apellido2_apoderado VARCHAR(25) NOT NULL,
-    telefono INTEGER(10) NOT NULL,
-    direccion VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    createdAt TimeStamp NOT NULL default current_timestamp,
-    updatedAt TimeStamp NOT NULL default current_timestamp
+CREATE TABLE profesor_jefe (
+  id_profesor_jefe INTEGER PRIMARY KEY auto_increment,
+  nombre1_profesor_jefe VARCHAR(15) NOT NULL,
+  nombre2_profesor_jefe VARCHAR(15) NOT NULL,
+  apellido1_profesor_jefe VARCHAR(15) NOT NULL,
+  apellido2_profesor_jefe VARCHAR(15) NOT NULL,
+  curso_jefatura VARCHAR(20) NOT NULL, 
+  edad INTEGER NOT NULL,
+  telefono INTEGER NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
+);
+*/
+-------------------------------------------------------------
+-- Crear tabla curso. 
+/*
+CREATE TABLE curso (
+  id_curso INTEGER PRIMARY KEY auto_increment,
+  nombre_curso VARCHAR(15) NOT NULL,  
+  sala INTEGER NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
+);
+*/
+-------------------------------------------------------------
+-- Crear tabla sala. 
+/*
+CREATE TABLE sala (
+  id_sala INTEGER PRIMARY KEY auto_increment,
+  numero_sala INTEGER NOT NULL,  
+  ubicacion VARCHAR(50) NOT NULL,
+  nombre_curso VARCHAR(15) NOT NULL,
+  createdAt TimeStamp NOT NULL default current_timestamp,
+  updatedAt TimeStamp NOT NULL default current_timestamp
 );
 */
